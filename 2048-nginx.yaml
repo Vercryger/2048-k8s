@@ -1,0 +1,21 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: nginx-2048
+  namespace: nginx-2048
+  labels:
+    app.kubernetes.io/name: nginx-2048
+    app.kubernetes.io/part-of: nginx-2048
+spec:
+  externalTrafficPolicy: Local
+  type: LoadBalancer
+  selector:
+    app.kubernetes.io/name: nginx-2048
+    app.kubernetes.io/part-of: nginx-2048
+  ports:
+    - name: http
+      port: 80
+      targetPort: http
+    - name: https
+      port: 443
+      targetPort: https

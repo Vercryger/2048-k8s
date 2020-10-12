@@ -1,0 +1,25 @@
+# apiVersion: extensions/v1beta1
+# kind: Ingress
+# metadata:
+#   name: "2048-ingress"
+#   namespace: "2048-game"
+#   annotations:
+#     kubernetes.io/ingress.class: "nginx"
+#     ingress.kubernetes.io/ssl-redirect: "true"
+#     nginx.ingress.kubernetes.io/ssl-redirect: "true"
+#     nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+#   labels:
+#     app: 2048-ingress
+# spec:
+#   tls:
+#   - hosts:
+#     - chichin.app
+#     secretName: tls-secret
+#   rules:
+#     - host: chichin.app
+#       http:
+#         paths:
+#           - path: /
+#             backend:
+#               serviceName: "service-2048"
+#               servicePort: 80
