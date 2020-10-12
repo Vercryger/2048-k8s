@@ -1,3 +1,6 @@
+export AWS_PROFILE=myprofile
+
+
 https://aws.amazon.com/blogs/opensource/kubernetes-ingress-aws-alb-ingress-controller/
 https://aws.amazon.com/blogs/opensource/network-load-balancer-nginx-ingress-controller-eks/
 
@@ -51,3 +54,5 @@ curl -sS "https://raw.githubusercontent.com/kubernetes-sigs/aws-alb-ingress-cont
 
 
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout tls.key -out tls.crt -subj "/CN=chichin.app/O=chichin.app"
+
+
